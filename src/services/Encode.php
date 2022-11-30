@@ -32,7 +32,7 @@ class Encode extends Component
 
         $encodedString = '
 <span id="'.$encodeId.'"></span>
-<script type="text/javascript">
+<script type="text/javascript" data-cookieconsent="ignore">
     var sproutencodeemailRot13String = "'.$rot13encryptedString.'";
     var sproutencodeemailRot13 = sproutencodeemailRot13String.replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
     document.getElementById("'.$encodeId.'").innerHTML =
